@@ -26,7 +26,7 @@ var swiper = new Swiper(".slide-container", {
     spaceBetween: 20,
     centeredSlides: true,
     autoplay: {
-        delay: 1500,
+        delay: 1000,
         disableOnInteraction: false,
 
     },
@@ -81,9 +81,21 @@ window.addEventListener("load", function() {
                 body: data,
             })
             .then(() => {
-                alert("Thank You for Your Response 😀");
                 form.reset();
             })
     });
 
 });
+
+
+let open = document.getElementById('send');
+let show = document.getElementById('alert');
+let close = document.getElementById('close');
+
+open.addEventListener("click", () => {
+    show.style.display = "block";
+})
+
+close.addEventListener("click", () => {
+    show.style.display = "none";
+})

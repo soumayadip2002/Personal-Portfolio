@@ -5,7 +5,8 @@
     --color: #faea06;
     --white: #eee;
     --violet: rgb(149, 12, 161);
-    --green: #13880d;
+    --orange: #fd4d05;
+    --green: #0fd310;
     --light-color: #fff;
     --border: .2rem solid var(--color);
 }
@@ -347,7 +348,7 @@ header .soumya {
 }
 
 .projects .box-container .box {
-    overflow: hidden;
+    padding: 1.5rem;
     background: var(--black);
     border-radius: 1rem;
     border: var(--black);
@@ -359,12 +360,30 @@ header .soumya {
 }
 
 .projects .box-container .box .image img {
-    height: 30rem;
+    height: 27rem;
     width: 100%;
+    border-radius: 1rem;
+}
+
+.projects .box-container .box .image img:hover {
+    transform: scale(1.03);
 }
 
 .projects .box-container .box .content {
     padding: 1rem;
+}
+
+.projects .box-container .box .content a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+}
+
+.projects .box-container .box .content h3 {
+    margin-top: 1.3rem;
+}
+
+.projects .box-container .box .content a:hover {
+    color: var(--violet);
 }
 
 .projects .box-container .box .content h1 {
@@ -373,21 +392,18 @@ header .soumya {
     text-align: center;
 }
 
-.projects .box-container .box .content h3 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
-}
-
 .projects .box-container .box .content i {
-    color: var(--color);
+    color: var(--orange);
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 .projects .box-container .box .content i:hover {
     padding-left: 2rem;
+}
+
+.contact .hello {
+    position: relative;
 }
 
 .me {
@@ -403,6 +419,50 @@ header .soumya {
     margin-bottom: 2rem;
 }
 
+.alert {
+    position: relative;
+    margin: 0 auto;
+    width: 30%;
+    background: var(--white);
+    display: block;
+    padding: 3rem;
+    border-radius: .5rem;
+    margin-top: -50rem;
+    display: none;
+}
+
+.alert #close {
+    display: flex;
+    justify-content: end;
+    color: var(--orange);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -3rem;
+    margin-right: -2rem;
+}
+
+.alert #right {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--green);
+}
+
+.alert h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.alert p {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--violet);
+}
+
 .me input,
 textarea {
     width: 100%;
@@ -413,6 +473,8 @@ textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: none;
+    background: none;
+    color: var(--color);
 }
 
 .me label {
@@ -421,10 +483,14 @@ textarea {
 }
 
 .me .btn {
+    font-size: 2rem;
+    font-weight: bold;
     padding: 1rem 3rem;
+    border: .2rem solid var(--orange);
 }
 
 .me .btn:hover {
+    background: var(--orange);
     color: var(--bg-color);
 }
 
@@ -563,6 +629,9 @@ input[type=submit]:hover {
     .me {
         width: 80%;
     }
+    .alert {
+        width: 50%;
+    }
 }
 
 @media (max-width:450px) {
@@ -583,12 +652,16 @@ input[type=submit]:hover {
         width: 70%;
     }
     .projects .box-container .box .image img {
-        height: 30rem;
+        height: 27rem;
     }
     .projects .box-container {
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
     .me {
         width: 100%;
+    }
+    .alert {
+        width: 73%;
+        margin-top: -55rem;
     }
 }

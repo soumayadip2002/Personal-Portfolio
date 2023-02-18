@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 
 </head>
@@ -191,6 +192,8 @@
     </section>
 
     <!-- skills section ends -->
+
+    <!-- Projects Sections starts -->
     <section class="projects" id="projects">
         <div class="heading">
             <h1>My<span> projects</span></h1>
@@ -203,7 +206,9 @@
                 </div>
                 <div class="content">
                     <h1>Online Food Shop</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://soumayadip2002.github.io/Online-Food-Shop/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
 
@@ -213,7 +218,9 @@
                 </div>
                 <div class="content">
                     <h1>Online Grocery Shop</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://soumayadip2002.github.io/Grocery-Shop-2.0/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
 
@@ -223,7 +230,9 @@
                 </div>
                 <div class="content">
                     <h1>personal portfolio</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://soumayadip2002.github.io/Personal-Portfolio/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
 
@@ -234,7 +243,9 @@
                 </div>
                 <div class="content">
                     <h1>Research Paper</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://ijarcce.com/papers/prediction-on-the-combine-effect-of-population-education-and-unemployment-on-criminal-activity-using-machine-learning/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
 
@@ -244,7 +255,9 @@
                 </div>
                 <div class="content">
                     <h1>Music Website</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://soumayadip2002.github.io/Soumya-/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
 
@@ -254,13 +267,15 @@
                 </div>
                 <div class="content">
                     <h1>Tourist Website</h1>
-                    <h3>view <i class="fa-solid fa-arrow-right-long"></i> <span><a href="#"></a></span></h3>
+                    <a href="https://soumayadip2002.github.io/Tourist/" target="_blank">
+                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
                 </div>
             </div>
         </div>
 
     </section>
-    <!-- -->
+    <!-- Projects Sections ends -->
 
 
     <!-- contact section starts -->
@@ -269,22 +284,36 @@
         <div class="heading">
             <h1>Contact<span> Me</span></h1>
         </div>
-        <div class="me">
-            <form method="POST" id="my-form" action="https://script.google.com/macros/s/AKfycbzHqDl49GgmLY39TP-HldYMu8FzHutNLDBbcN6T3wtcy7zcO_tUBImkvMvEOBemLNl13Q/exec">
-                <label for="name">Name</label>
-                <input type="text" name="name" placeholder="enter name..." required>
 
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="enter email..." required>
+        <div class="hello">
+            <div class="me">
+                <form method="POST" id="my-form" action="https://script.google.com/macros/s/AKfycbzHqDl49GgmLY39TP-HldYMu8FzHutNLDBbcN6T3wtcy7zcO_tUBImkvMvEOBemLNl13Q/exec">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="enter name..." required>
 
-                <label for="phone">Phone</label>
-                <input type="tel" name="phone" placeholder="enter phone number..." required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="enter email..." required>
 
-                <label for="message">message</label>
-                <textarea name="message" id="" cols="30" rows="10" placeholder="say hello...." required></textarea>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" placeholder="enter phone number..." required>
 
-                <button type="submit" class="btn">Send</button>
-            </form>
+                    <label for="message">message</label>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="say hello...." required></textarea>
+
+                    <button type="submit" id="send" class="btn"><i class="fa-sharp fa-solid fa-paper-plane"></i>  Send</button>
+
+                </form>
+            </div>
+
+            <div class="alert" id="alert">
+                <a href="" id="close"><i class="uil uil-times"></i></a>
+                <i id="right" class="fa-solid fa-circle-check"></i>
+                <h1>Successfully Submitted !!</h1>
+                <p>Thank you for your response 😀😀</p>
+
+
+            </div>
+
         </div>
 
 
