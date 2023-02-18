@@ -120,7 +120,8 @@ header .icon i {
     color: var(--color);
 }
 
-header .icon i:hover {
+header .icon i:hover,
+header .icon a:hover {
     transform: rotate(360deg);
 }
 
@@ -494,10 +495,6 @@ textarea {
     color: var(--bg-color);
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
 @media (max-width:991px) {
     html {
         font-size: 55%
@@ -540,7 +537,7 @@ input[type=submit]:hover {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     header .navbar a {
         display: block;
@@ -645,10 +642,10 @@ input[type=submit]:hover {
         font-size: 1.5rem;
     }
     .card .image-box {
-        margin-bottom: -12rem;
+        margin-bottom: -15rem;
     }
     .card .image-box img {
-        height: 50%;
+        height: 35%;
         width: 70%;
     }
     .projects .box-container .box .image img {

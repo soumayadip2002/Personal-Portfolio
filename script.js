@@ -3,6 +3,7 @@ let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
+    menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 
 }
@@ -99,3 +100,8 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     show.style.display = "none";
 })
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+});
