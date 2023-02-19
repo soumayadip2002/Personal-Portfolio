@@ -60,8 +60,8 @@ body {
 .logo {
     font-size: 2rem;
     background: var(--color);
-    padding: .7rem 1.5rem;
-    border-radius: 100%;
+    padding: .8rem 1.2rem;
+    border-radius: 50%;
 }
 
 .logo i {
@@ -211,18 +211,19 @@ header .soumya {
     margin-top: -4rem;
 }
 
-.home .social a {
-    background: transparent;
-    color: var(--light-color);
+.home .social i {
+    background: none;
+    color: var(--color);
     border: var(--border);
     border-radius: 100%;
-    padding: .5rem 1rem;
+    padding: 1rem;
     margin: .7rem;
 }
 
-.home .social a:hover {
-    background: var(--color);
-    color: var(--bg-color);
+.home .social i:hover {
+    color: var(--orange);
+    border: .2rem solid var(--orange);
+    transform: scale(1.1);
 }
 
 .about {
@@ -325,6 +326,7 @@ header .soumya {
 .card {
     background: var(--black);
     border-radius: 1rem;
+    border: .3rem solid rgb(95, 0, 139);
 }
 
 .card .image-box {
@@ -352,7 +354,7 @@ header .soumya {
     padding: 1.5rem;
     background: var(--black);
     border-radius: 1rem;
-    border: var(--black);
+    border: .3rem solid rgb(95, 0, 139);
     cursor: pointer;
 }
 
@@ -367,7 +369,8 @@ header .soumya {
 }
 
 .projects .box-container .box .image img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    transition: .3s;
 }
 
 .projects .box-container .box .content {
@@ -430,6 +433,7 @@ header .soumya {
     border-radius: .5rem;
     margin-top: -50rem;
     display: none;
+    margin-bottom: 35rem;
 }
 
 .alert #close {
@@ -493,6 +497,68 @@ textarea {
 .me .btn:hover {
     background: var(--orange);
     color: var(--bg-color);
+}
+
+.footer {
+    margin-top: 2rem;
+    width: 100%;
+    background: var(--black);
+    position: absolute;
+}
+
+.footer .box-container {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.footer .box-container .box a {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    color: var(--orange);
+}
+
+.footer .box-container .box i:hover {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box a:hover {
+    text-decoration: underline;
+    color: var(--color);
+}
+
+.footer .box-container .box .social {
+    display: flex;
+    margin-left: -2rem;
+}
+
+.footer .box-container .box .social i {
+    background: none;
+    font-size: 2rem;
+    border: .3rem solid var(--violet);
+    color: var(--violet);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.footer .box-container .box .social i:hover {
+    border: var(--border);
+    color: var(--color);
+    transform: scale(1.2);
 }
 
 @media (max-width:991px) {
@@ -660,5 +726,16 @@ textarea {
     .alert {
         width: 73%;
         margin-top: -55rem;
+    }
+    .footer .box-container {
+        display: grid;
+        margin-left: -2rem;
+    }
+    .footer .box-container .box .social {
+        margin-left: 0;
+    }
+    .footer .box-container .box {
+        margin-top: 2rem;
+        text-align: left;
     }
 }
