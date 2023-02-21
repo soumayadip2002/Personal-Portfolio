@@ -150,6 +150,7 @@ header .soumya {
     width: 90%;
     background: var(--black);
     border-radius: 1rem;
+    z-index: 0;
 }
 
 .home .container {
@@ -160,7 +161,7 @@ header .soumya {
     padding: 8rem;
 }
 
-.home .image {
+.home .container .image {
     border-radius: 100%;
 }
 
@@ -168,6 +169,7 @@ header .soumya {
     max-width: 100%;
     width: 400px;
     border-radius: 100%;
+    z-index: 3;
 }
 
 .home .content {
@@ -203,6 +205,11 @@ header .soumya {
     font-size: 1.5rem;
     color: var(--light-color);
     margin-right: .5rem;
+}
+
+.home .social a::before,
+.home .sociale ::after {
+    background: linear-gradient(to right, #cd4545, #42b883);
 }
 
 .home .content .btn:hover {
@@ -260,6 +267,10 @@ header .soumya {
     border-radius: 1rem;
 }
 
+.about .container .box .image {
+    position: relative;
+}
+
 .img {
     display: none;
 }
@@ -293,6 +304,14 @@ header .soumya {
     padding-right: 6rem;
     margin: 0 auto;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.educ {
+    font-size: 3rem;
+    color: var(--orange);
+    margin-left: 25rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -438,18 +457,6 @@ header .soumya {
     position: relative;
 }
 
-.projects .box-container .box::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: #fff;
-    border-radius: 1rem;
-    z-index: -1;
-}
-
 .projects .box-container .box::after {
     content: '';
     position: absolute;
@@ -458,13 +465,12 @@ header .soumya {
     right: -3px;
     bottom: -3px;
     background: #fff;
-    filter: blur(10px);
+    filter: blur(8px);
     z-index: -2;
 }
 
-.projects .box-container .box::before,
 .projects .box-container .box::after {
-    background: linear-gradient(235deg, #89ff00, #fe4e6e, #00bcd4);
+    background: linear-gradient(to right, #89ff00, #00bcd4, #fe4e6e);
 }
 
 .projects .box-container .box .image {
@@ -515,9 +521,22 @@ header .soumya {
     padding-left: 2rem;
 }
 
-.contact .hello {
+
+/*.certificates {
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 1rem;
     position: relative;
 }
+
+.certificates img {
+    height: 60rem;
+    width: 100rem;
+}
+
+.contact .hello {
+    position: relative;
+}*/
 
 .me {
     margin: 0 auto;
@@ -720,7 +739,7 @@ textarea {
     }
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        height: 60vh;
+        height: 100vh;
         transition: linear .4s;
     }
     header .navbar a {
@@ -872,5 +891,8 @@ textarea {
     }
     .card::after {
         inset: 1.2px;
+    }
+    .educ {
+        margin-left: 10rem;
     }
 }
