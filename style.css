@@ -309,29 +309,35 @@ header .soumya {
     cursor: pointer;
     color: var(--light-color);
     font-weight: normal;
-    overflow: hidden;
+    position: relative;
 }
 
 .about .container .content .education::before {
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
-    margin-left: -32.8rem;
-    margin-top: -3.5rem;
-    border-left: 7px solid #fc3a52;
-    border-top: 7px solid #fc3a52;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
 }
 
 .about .container .content .education::after {
     content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
-    margin-left: 22.3rem;
-    margin-top: -7.4rem;
-    border-right: 7px solid #1dad9b;
-    border-bottom: 7px solid #1dad9b;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #fff;
+    filter: blur(15px);
+    z-index: -2;
+}
+
+.about .container .content .education::before,
+.about .container .content .education::after {
+    background: linear-gradient(235deg, #fc3a52, #ffe700, #5be7a9);
 }
 
 .about .container .content .education:hover {
@@ -420,15 +426,45 @@ header .soumya {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    gap: 1.5rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
 }
 
 .projects .box-container .box {
     padding: 1.5rem;
     background: var(--black);
     border-radius: 1rem;
-    border: .3rem solid rgb(95, 0, 139);
     cursor: pointer;
+    position: relative;
+}
+
+.projects .box-container .box::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #fff;
+    border-radius: 1rem;
+    z-index: -1;
+}
+
+.projects .box-container .box::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: #fff;
+    filter: blur(10px);
+    z-index: -2;
+}
+
+.projects .box-container .box::before,
+.projects .box-container .box::after {
+    background: linear-gradient(235deg, #89ff00, #fe4e6e, #00bcd4);
 }
 
 .projects .box-container .box .image {
@@ -653,34 +689,6 @@ textarea {
     .me {
         width: 80%;
     }
-    .about .container .content .education::before {
-        margin-left: -22rem;
-        margin-top: -3.6rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 10rem;
-        margin-top: -8.5rem;
-    }
-}
-
-@media (max-width:920px) {
-    .about .container .content .education::before {
-        margin-left: -21.5rem;
-        margin-top: -3.6rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 9.5rem;
-        margin-top: -8.6rem;
-    }
-}
-
-@media (max-width:864px) {
-    .about .container .content .education::before {
-        margin-left: -20.15rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 7.9rem;
-    }
 }
 
 @media (max-width:768px) {
@@ -812,28 +820,6 @@ textarea {
     .card::before {
         height: 200%;
     }
-    .about .container .content .education::before {
-        margin-left: -34.4rem;
-        margin-top: -2rem;
-        width: 70px;
-        height: 70px;
-    }
-    .about .container .content .education::after {
-        width: 70px;
-        height: 70px;
-        margin-left: 25.8rem;
-        margin-top: -6.7rem;
-    }
-}
-
-@media (max-width:568px) {
-    .about .container .content .education::before {
-        margin-left: -25.3rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 16.6rem;
-        margin-top: -6.8rem;
-    }
 }
 
 @media (max-width:450px) {
@@ -886,22 +872,5 @@ textarea {
     }
     .card::after {
         inset: 1.2px;
-    }
-    .about .container .content .education::before {
-        margin-left: -19rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 9.5rem;
-        margin-top: -7.5rem;
-    }
-}
-
-@media (max-width:422px) {
-    .about .container .content .education::before {
-        margin-left: -20.7rem;
-    }
-    .about .container .content .education::after {
-        margin-left: 11rem;
-        margin-top: -7.5rem;
     }
 }
