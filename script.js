@@ -93,13 +93,25 @@ let open = document.getElementById('send');
 let show = document.getElementById('alert');
 let close = document.getElementById('close');
 
-open.addEventListener("click", () => {
-    show.style.display = "block";
-})
+function valid() {
+    var n = document.forms['form1']['name'].value;
+    var e = document.forms['form1']['email'].value;
+    var p = document.forms['form1']['phone'].value;
+    var m = document.forms['form1']['message'].value;
+
+    if ((n == " ") && (e == " ") && (p == " ") && (m == " ")) {
+        show.style.display = "none";
+    } else {
+        show.style.display = "block";
+    }
+
+}
+
 
 close.addEventListener("click", () => {
     show.style.display = "none";
 })
+
 
 var swiper = new Swiper(".mySwiper", {
     effect: "cards",
