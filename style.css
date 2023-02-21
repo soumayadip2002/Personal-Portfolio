@@ -895,3 +895,13 @@ textarea {
         margin-top: -7.5rem;
     }
 }
+
+@media (max-width:422px) {
+    .about .container .content .education::before {
+        margin-left: -20.7rem;
+    }
+    .about .container .content .education::after {
+        margin-left: 11rem;
+        margin-top: -7.5rem;
+    }
+}
