@@ -521,21 +521,53 @@ header .soumya {
     padding-left: 2rem;
 }
 
-
-/*.certificates {
+.certificates {
     margin: 0 auto;
     width: 80%;
     border-radius: 1rem;
     position: relative;
 }
 
+.certificates .heading {
+    margin-bottom: 3rem;
+}
+
+.certificates .box-container {
+    columns: 2 35rem;
+    column-gap: 1.5rem;
+}
+
+.certificates .box-container .box {
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    position: relative;
+}
+
+.certificates .box-container .box h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
 .certificates img {
-    height: 60rem;
-    width: 100rem;
+    width: 100%;
+    border-radius: .5rem;
+    cursor: pointer;
 }
 
 .contact .hello {
     position: relative;
+}
+
+
+/*.hobbies {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.hobbies img {
+    height: 20rem;
+    width: auto;
 }*/
 
 .me {
@@ -893,6 +925,6 @@ textarea {
         inset: 1.2px;
     }
     .educ {
-        margin-left: 10rem;
+        margin-left: 10.8rem;
     }
 }
