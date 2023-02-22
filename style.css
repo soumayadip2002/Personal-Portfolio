@@ -630,6 +630,50 @@ header .soumya {
     cursor: pointer;
 }
 
+.hobbies {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.hobbies .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    column-gap: 6rem;
+    row-gap: 6rem;
+}
+
+.hobbies .box-container .box {
+    text-align: center;
+    margin-top: 4rem;
+    background: #0e2431;
+    border-radius: 100%;
+    padding: 7rem;
+    position: relative;
+}
+
+.hobbies .box-container .box h3 {
+    color: #42b883;
+    font-size: 2rem;
+}
+
+.hobbies img {
+    height: 20rem;
+    width: auto;
+}
+
+.hobbies .box-container .box::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to right, #fc3a52, #fcffc1, #1dad9b);
+    z-index: -1;
+    filter: blur(20px);
+    border-radius: 100%;
+}
+
 .contact .hello {
     position: relative;
 }
@@ -958,6 +1002,13 @@ textarea {
     .card::before {
         height: 200%;
     }
+    .hobbies .box-container .box {
+        padding: 20rem 0;
+    }
+    .hobbies img {
+        height: 25rem;
+        width: auto;
+    }
 }
 
 @media (max-width:450px) {
@@ -1016,5 +1067,12 @@ textarea {
     }
     .home .container .image .kk::before {
         width: 70px;
+    }
+    .hobbies .box-container .box {
+        padding: 7rem;
+    }
+    .hobbies img {
+        height: 20rem;
+        width: auto;
     }
 }
