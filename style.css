@@ -214,7 +214,7 @@ header .soumya {
     position: absolute;
     width: 200px;
     height: 450px;
-    background: linear-gradient(to right, #fc3a52, #5be7a9, #ffe700, #240041);
+    background: linear-gradient(to right, #240041, #fc3a52, #5be7a9, #ffe700, #240041);
     z-index: 1;
     animation: logo 5s linear infinite;
 }
@@ -1066,7 +1066,7 @@ textarea {
         margin-left: 10.8rem;
     }
     .home .container .image .kk::before {
-        width: 70px;
+        width: 100px;
     }
     .hobbies .box-container .box {
         padding: 7rem;
