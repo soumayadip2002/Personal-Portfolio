@@ -2,7 +2,7 @@
  :root {
     --bg-color: #111;
     --black: #222;
-    --color: #faea06;
+    --color: #ffe700;
     --white: #eee;
     --violet: rgb(149, 12, 161);
     --orange: #fd4d05;
@@ -75,14 +75,14 @@ body {
 .logo::before {
     content: '';
     position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
     background: var(--light-color);
     z-index: -1;
-    border-radius: 50%;
-    animation: logo 1s linear infinite;
+    border-radius: 100%;
+    animation: logo 4s linear infinite;
 }
 
 .logo::after {
@@ -94,13 +94,13 @@ body {
     bottom: -3px;
     background: var(--light-color);
     z-index: -2;
-    border-radius: 50%;
+    border-radius: 100%;
     filter: blur(20px);
 }
 
 .logo::before,
 .logo::after {
-    background: linear-gradient(#f70776, #faf5e4, #42b883);
+    background: linear-gradient(to right, #fc3a52, #42b883);
 }
 
 @keyframes logo {
@@ -200,7 +200,6 @@ header .soumya {
 
 .home .container .image .kk {
     z-index: 3;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,23 +208,17 @@ header .soumya {
     position: relative;
 }
 
-.home .container .image .kk::before {
+.home .container .image .kk::after {
     content: '';
     position: absolute;
-    width: 200px;
-    height: 450px;
-    background: linear-gradient(to right, #240041, #fc3a52, #5be7a9, #ffe700, #240041);
-    z-index: 1;
-    animation: logo 5s linear infinite;
-}
-
-@keyframes logo {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -2;
+    background: #42b883;
+    filter: blur(15px);
+    border-radius: 100%;
 }
 
 .home .image img {
@@ -268,11 +261,6 @@ header .soumya {
     font-size: 1.5rem;
     color: var(--light-color);
     margin-right: .5rem;
-}
-
-.home .social a::before,
-.home .sociale ::after {
-    background: linear-gradient(to right, #cd4545, #42b883);
 }
 
 .home .content .btn:hover {
@@ -372,7 +360,7 @@ header .soumya {
 
 .educ {
     font-size: 3rem;
-    color: var(--orange);
+    color: var(--violet);
     margin-left: 25rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -401,8 +389,8 @@ header .soumya {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: #fff;
-    z-index: -1;
+    background: #2c5d63;
+    z-index: -2;
 }
 
 .about .container .content .education::after {
@@ -412,19 +400,16 @@ header .soumya {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: #fff;
-    filter: blur(15px);
+    background: #2c5d63;
+    filter: blur(9px);
     z-index: -2;
 }
 
-.about .container .content .education::before,
-.about .container .content .education::after {
-    background: linear-gradient(235deg, #fc3a52, #ffe700, #5be7a9);
-}
-
 .about .container .content .education:hover {
-    background: var(--color);
-    color: var(--bg-color);
+    background: var(--black);
+    color: var(--light-color);
+    transform: scale(1.03);
+    transition: .4s linear;
 }
 
 .about .container .content .education h2 {
@@ -538,13 +523,9 @@ header .soumya {
     left: -3px;
     right: -3px;
     bottom: -3px;
-    background: #fff;
+    background: #004445;
     filter: blur(8px);
     z-index: -2;
-}
-
-.projects .box-container .box::after {
-    background: linear-gradient(to right, #89ff00, #00bcd4, #fe4e6e);
 }
 
 .projects .box-container .box .image {
@@ -628,50 +609,6 @@ header .soumya {
     width: 100%;
     border-radius: .5rem;
     cursor: pointer;
-}
-
-.hobbies {
-    margin: 0 auto;
-    width: 80%;
-}
-
-.hobbies .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    column-gap: 6rem;
-    row-gap: 6rem;
-}
-
-.hobbies .box-container .box {
-    text-align: center;
-    margin-top: 4rem;
-    background: #0e2431;
-    border-radius: 100%;
-    padding: 7rem;
-    position: relative;
-}
-
-.hobbies .box-container .box h3 {
-    color: #42b883;
-    font-size: 2rem;
-}
-
-.hobbies img {
-    height: 20rem;
-    width: auto;
-}
-
-.hobbies .box-container .box::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(to right, #fc3a52, #fcffc1, #1dad9b);
-    z-index: -1;
-    filter: blur(20px);
-    border-radius: 100%;
 }
 
 .contact .hello {
@@ -1002,13 +939,6 @@ textarea {
     .card::before {
         height: 200%;
     }
-    .hobbies .box-container .box {
-        padding: 20rem 0;
-    }
-    .hobbies img {
-        height: 25rem;
-        width: auto;
-    }
 }
 
 @media (max-width:450px) {
@@ -1067,12 +997,5 @@ textarea {
     }
     .home .container .image .kk::before {
         width: 100px;
-    }
-    .hobbies .box-container .box {
-        padding: 7rem;
-    }
-    .hobbies img {
-        height: 20rem;
-        width: auto;
     }
 }

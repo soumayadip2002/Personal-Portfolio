@@ -15,7 +15,7 @@ window.onscroll = () => {
 }
 
 var type = new Typed(".multi-text", {
-    strings: ["College Student", "Web Developer", "Django Developer"],
+    strings: ["College Student", "Web Developer", "Python Developer"],
     typeSpeed: 100,
     backSpedd: 100,
     backDelay: 1000,
