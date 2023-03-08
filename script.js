@@ -8,6 +8,40 @@ menu.onclick = () => {
 
 }
 
+let r = document.querySelector(':root');
+const toggle = document.getElementById('theme');
+
+toggle.addEventListener("click", function() {
+    this.classList.toggle("bx-moon");
+
+    if (this.classList.toggle('bxs-sun')) {
+        r.style.setProperty("--bg-color", "#111");
+        r.style.setProperty("--white", "#eee");
+        r.style.setProperty("--light-color", "#fff");
+        r.style.setProperty("--black", "#222");
+        r.style.setProperty("--color", "#ffe700");
+        r.style.setProperty("--font-color", "#111");
+        r.style.setProperty("--logo-color1", "#fc3a52");
+        r.style.setProperty("--logo-color2", "#42b883");
+        r.style.setProperty("--home-img", "#42b883");
+        r.style.setProperty("--bright", "#fff");
+        r.style.setProperty("--menu-bar", "#0e2431");
+    } else {
+        r.style.setProperty("--bg-color", "#eee");
+        r.style.setProperty("--white", "#111");
+        r.style.setProperty("--light-color", "#000");
+        r.style.setProperty("--black", "#f0ece2");
+        r.style.setProperty("--color", "#27ae60");
+        r.style.setProperty("--font-color", "#fff");
+        r.style.setProperty("--logo-color1", "#ff347f");
+        r.style.setProperty("--logo-color2", "#f8b400");
+        r.style.setProperty("--home-img", "#27ae60");
+        r.style.setProperty("--bright", "#000");
+        r.style.setProperty("--menu-bar", "#2c786c");
+
+    }
+})
+
 window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');

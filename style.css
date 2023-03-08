@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
- :root {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
+:root {
     --bg-color: #111;
+    --font-color: #111;
     --black: #222;
     --color: #ffe700;
     --white: #eee;
@@ -9,6 +11,12 @@
     --green: #0fd310;
     --light-color: #fff;
     --border: .2rem solid var(--color);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.5);
+    --logo-color1: #fc3a52;
+    --logo-color2: #42b883;
+    --home-img: #42b883;
+    --menu-bar: #0e2431;
+    --bright: #fff;
 }
 
 * {
@@ -68,6 +76,13 @@ body {
     overflow: hidden;
 }
 
+.theme {
+    font-size: 3rem;
+    color: var(--bright);
+    cursor: pointer;
+    padding: 1rem;
+}
+
 .logo {
     position: relative;
 }
@@ -100,7 +115,7 @@ body {
 
 .logo::before,
 .logo::after {
-    background: linear-gradient(to right, #fc3a52, #42b883);
+    background: linear-gradient(to right, var(--logo-color1), var(--logo-color2));
 }
 
 @keyframes logo {
@@ -114,7 +129,7 @@ body {
 
 .logo .log i {
     font-size: 2rem;
-    color: var(--bg-color);
+    color: var(--font-color);
     font-weight: bold;
 }
 
@@ -140,6 +155,7 @@ header {
     justify-content: space-between;
     box-shadow: var(--black);
     z-index: 1000;
+    box-shadow: var(--box-shadow);
 }
 
 header .navbar a {
@@ -153,7 +169,7 @@ header .navbar a {
 header .navbar a.active,
 header .navbar a:hover {
     background: var(--color);
-    color: var(--bg-color);
+    color: var(--font-color);
     border-radius: .5rem;
 }
 
@@ -188,6 +204,7 @@ header .soumya {
     background: var(--black);
     border-radius: 1rem;
     z-index: 0;
+    box-shadow: var(--box-shadow);
 }
 
 .home .container {
@@ -216,7 +233,7 @@ header .soumya {
     right: -2px;
     bottom: -2px;
     z-index: -2;
-    background: #42b883;
+    background: var(--home-img);
     filter: blur(15px);
     border-radius: 100%;
 }
@@ -264,7 +281,7 @@ header .soumya {
 }
 
 .home .content .btn:hover {
-    color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .home .content .des {
@@ -295,7 +312,7 @@ header .soumya {
 
 .home .social i:hover {
     background: var(--color);
-    color: var(--bg-color);
+    color: var(--font-color);
     rotate: 360deg;
     transform: scale(1.2);
     transition: .6s;
@@ -316,6 +333,7 @@ header .soumya {
     max-width: 100%;
     width: 450px;
     border-radius: 1rem;
+    box-shadow: var(--box-shadow);
 }
 
 .about .container .box .image {
@@ -454,6 +472,7 @@ header .soumya {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--box-shadow);
 }
 
 .card::before {
@@ -514,6 +533,7 @@ header .soumya {
     border-radius: 1rem;
     cursor: pointer;
     position: relative;
+    box-shadow: var(--box-shadow);
 }
 
 .projects .box-container .box::after {
@@ -609,6 +629,7 @@ header .soumya {
     width: 100%;
     border-radius: .5rem;
     cursor: pointer;
+    box-shadow: var(--box-shadow);
 }
 
 .contact .hello {
@@ -626,6 +647,7 @@ header .soumya {
     border-radius: .5rem;
     padding: 2rem;
     margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
 }
 
 .alert {
@@ -715,6 +737,7 @@ textarea {
     width: 100%;
     background: var(--black);
     position: absolute;
+    box-shadow: var(--box-shadow);
 }
 
 .footer .box-container {
@@ -808,23 +831,27 @@ textarea {
     header .icon #menu-bars {
         display: inline-block;
     }
+    .theme {
+        padding: 0;
+        margin-top: -1.5rem;
+        margin-left: -1.3rem;
+    }
     header .soumya {
         display: inline-block;
         color: var(--light-color);
         font-size: 2rem;
-        font-family: 'Times New Roman', Times, serif;
-        font-weight: bold;
+        font-family: 'Lobster', cursive;
+        font-weight: normal;
     }
     header .soumya span {
         color: var(--color);
-        font-weight: normal;
     }
     header .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #0e2431;
+        background: var(--menu-bar);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         border-bottom: .1rem solid rgba(0, 0, 0, .2);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -832,8 +859,8 @@ textarea {
         transition: linear .4s;
     }
     header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        height: 70vh;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 100vh;
         transition: linear .4s;
     }
     header .navbar a {
