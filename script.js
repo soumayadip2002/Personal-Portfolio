@@ -1,11 +1,14 @@
 let menu = document.querySelector('#menu-bars');
-
 let navbar = document.querySelector('.navbar');
+let menuclose = document.querySelector('#nclose')
 
 menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+    navbar.classList.add('active');
 
+}
+
+menuclose.onclick = () => {
+    navbar.classList.remove('active')
 }
 
 let r = document.querySelector(':root');
@@ -182,22 +185,3 @@ function activeProject() {
 }
 
 linkproject.forEach(e => e.addEventListener("click", activeProject));
-
-
-let certificates = mixitup('.certificates-container', {
-    selectors: {
-        target: '.certificates-box'
-    },
-    animation: {
-        duration: 300
-    }
-})
-
-const linkcertificates = document.querySelectorAll('.certificates_id')
-
-function activecertificates() {
-    linkcertificates.forEach(e => e.classList.remove('active-certificates'))
-    this.classList.add('active-certificates')
-}
-
-linkcertificates.forEach(e => e.addEventListener("click", activecertificates))
