@@ -15,10 +15,10 @@ toggle.addEventListener("click", function() {
     this.classList.toggle("bx-moon");
 
     if (this.classList.toggle('bxs-sun')) {
-        r.style.setProperty("--bg-color", "#111");
+        r.style.setProperty("--bg-color", "linear-gradient(145deg, #1e2024, #23272b)");
         r.style.setProperty("--white", "#eee");
         r.style.setProperty("--light-color", "#fff");
-        r.style.setProperty("--black", "#222");
+        r.style.setProperty("--black", "#212428");
         r.style.setProperty("--color", "#ffe700");
         r.style.setProperty("--font-color", "#111");
         r.style.setProperty("--logo-color1", "#fc3a52");

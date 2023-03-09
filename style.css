@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
 :root {
-    --bg-color: #111;
+    --bg-color: linear-gradient(145deg, #1e2024, #23272b);
     --font-color: #111;
-    --black: #222;
+    --black: #212428;
     --color: #ffe700;
     --white: #eee;
     --violet: rgb(149, 12, 161);
@@ -37,15 +37,6 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    width: .7rem;
-}
-
- ::-webkit-scrollbar-thumb {
-    background: var(--color);
-    border-radius: 1rem;
-}
-
 body {
     background: var(--bg-color);
 }
@@ -58,6 +49,12 @@ body {
     text-align: center;
     border-radius: 5rem;
     cursor: pointer;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color);
 }
 
 .btn:hover {
@@ -225,19 +222,6 @@ header .soumya {
     position: relative;
 }
 
-.home .container .image .kk::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    z-index: -2;
-    background: var(--home-img);
-    filter: blur(15px);
-    border-radius: 100%;
-}
-
 .home .image img {
     max-width: 100%;
     width: 400px;
@@ -319,141 +303,52 @@ header .soumya {
 }
 
 .about {
+    width: 90%;
     margin: 0 auto;
-    width: 80%;
 }
 
 .about .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 10rem;
+    margin-top: 2rem;
 }
 
-.about .container .box .image img {
-    max-width: 100%;
-    width: 450px;
+.about .container .content {
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--light-color);
+    text-align: justify;
+}
+
+.about .container .image {
+    padding: 2rem;
     border-radius: 1rem;
+    text-align: center;
+}
+
+.about .container .image img {
+    height: 350px;
+    background: var(--black);
     box-shadow: var(--box-shadow);
+    padding: 2rem;
 }
 
-.about .container .box .image {
-    position: relative;
+.about .container .content .btn {
+    margin-top: 1rem;
+    text-align: center;
 }
 
-.img {
-    display: none;
+.about .container .content .btn:hover {
+    color: var(--font-color);
 }
 
 .heading {
     margin-top: 8rem;
     text-align: center;
-    font-size: 2.5rem;
-}
-
-.heading h1 {
-    color: var(--light-color);
-}
-
-.heading span {
-    color: var(--color);
-}
-
-.about .container .content h1 {
-    font-size: 3rem;
-    color: var(--light-color);
-}
-
-.about .container .content span {
-    color: var(--color);
-}
-
-.about .container .content p {
-    font-size: 1.4rem;
-    color: var(--white);
-    padding-right: 6rem;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.educ {
-    font-size: 3rem;
-    color: var(--violet);
-    margin-left: 25rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about .container .content {
-    display: grid;
-}
-
-.about .container .content .education {
-    background: var(--black);
-    margin-top: 3rem;
-    width: 70%;
-    padding: 2rem;
-    text-align: center;
-    cursor: pointer;
-    color: var(--light-color);
-    font-weight: normal;
-    position: relative;
-}
-
-.about .container .content .education::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #2c5d63;
-    z-index: -2;
-}
-
-.about .container .content .education::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: #2c5d63;
-    filter: blur(9px);
-    z-index: -2;
-}
-
-.about .container .content .education:hover {
-    background: var(--black);
-    color: var(--light-color);
-    transform: scale(1.03);
-    transition: .4s linear;
-}
-
-.about .container .content .education h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-}
-
-.about .container .content .education h2 i {
-    color: #fc3a52;
     font-size: 2rem;
-    margin-right: .5rem;
-}
-
-.about .container .content .education h3 {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-}
-
-.about .container .content .education h4 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-
-.about .container .content .education h4 i {
-    color: #fc3a52;
-    margin-right: .5rem;
+    color: var(--light-color);
 }
 
 .skills .container {
@@ -812,6 +707,64 @@ textarea {
     transition: .3s;
 }
 
+.qualification {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.qualification_container {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10rem;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.qualification_container .content {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.qualification_container h1 {
+    font-size: 1.9rem;
+    color: #0fd4d0;
+    cursor: pointer;
+    font-weight: normal;
+    margin-left: -1rem;
+}
+
+.qualification_container .content .box h2 {
+    color: var(--white);
+    font-weight: normal;
+    font-size: medium;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.qualification_container .content .box h3 {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.qualification_container .content .box p {
+    color: var(--logo-color1);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.qualification_container .box {
+    padding-left: 20px;
+    transition: .2s linear;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+    border-left: var(--border);
+}
+
 @media (max-width:991px) {
     html {
         font-size: 55%
@@ -825,11 +778,20 @@ textarea {
     .me {
         width: 80%;
     }
+    .about .container {
+        display: grid;
+        gap: 1rem;
+    }
 }
 
 @media (max-width:768px) {
     header .icon #menu-bars {
         display: inline-block;
+    }
+    .about .container .content .con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .theme {
         padding: 0;
@@ -907,24 +869,6 @@ textarea {
     .home .social {
         justify-content: center;
     }
-    .about .img {
-        display: inline-block;
-        display: flex;
-        justify-content: center;
-    }
-    .about .img img {
-        margin-top: 2rem;
-        width: 170px;
-        border-radius: 1rem;
-    }
-    .about .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .about .container .box .image img {
-        display: none;
-    }
     .heading {
         margin-top: 8rem;
         text-align: center;
@@ -935,21 +879,6 @@ textarea {
     }
     .heading span {
         color: var(--color);
-    }
-    .about .container .content .education {
-        width: 100%;
-    }
-    .about .container .content h1 {
-        text-align: center;
-        margin-top: 2rem;
-    }
-    .about .container .content p {
-        margin-left: 5rem;
-        text-align: justify;
-        margin-top: 2rem;
-    }
-    .about .container .content .education {
-        padding: .5rem 2rem;
     }
     .projects .box-container .box .image img {
         height: 25rem;
@@ -974,6 +903,14 @@ textarea {
     }
     header {
         padding: 1rem 2rem;
+    }
+    .qualification_container {
+        display: grid;
+        grid-template-columns: 290px;
+        row-gap: 3rem;
+    }
+    .about .container .image img {
+        height: 200px;
     }
     .home .container .content h2 {
         font-size: 1.5rem;
