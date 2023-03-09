@@ -412,7 +412,7 @@ header .soumya {
     width: 100%;
 }
 
-.projects .box-container {
+.projects .project-container {
     margin: 0 auto;
     margin-top: 2rem;
     width: 80%;
@@ -422,62 +422,78 @@ header .soumya {
     column-gap: 3rem;
 }
 
-.projects .box-container .box {
+.projects .projects_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .projects_filter .project_id {
+    margin: 0 1rem;
+    background: transparent;
+    padding: .6rem 1rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.projects .projects_filter .project_id.active-project {
+    background: var(--logo-color1);
+}
+
+.projects .project-container .project-box {
     padding: 2rem;
     background: var(--black);
-    border-radius: 1rem;
     cursor: pointer;
     position: relative;
     box-shadow: var(--box-shadow);
 }
 
-.projects .box-container .box .image {
-    width: auto;
-}
-
-.projects .box-container .box .image img {
+.projects .project-container .project-box .image img {
     height: 27rem;
     width: 100%;
-    border-radius: .5rem;
     border: .2rem solid rgba(0, 0, 0, 0.5);
 }
 
-.projects .box-container .box .image img:hover {
+.projects .project-container .project-box .image img:hover {
     transform: scale(1.05);
     transition: .3s;
 }
 
-.projects .box-container .box .content {
+.projects .project-container .project-box .content {
     padding: 1rem;
 }
 
-.projects .box-container .box .content a {
+.projects .project-container .project-box .content a {
     color: var(--light-color);
     font-size: 1.2rem;
 }
 
-.projects .box-container .box .content h3 {
+.projects .project-container .project-box .content h3 {
     margin-top: 1.3rem;
 }
 
-.projects .box-container .box .content a:hover {
+.projects .project-container .project-box .content a:hover {
     color: var(--violet);
 }
 
-.projects .box-container .box .content h1 {
+.projects .project-container .project-box .content h1 {
     font-size: 1.6rem;
     color: var(--light-color);
     text-align: center;
 }
 
-.projects .box-container .box .content i {
+.projects .project-container .project-box .content i {
     color: var(--orange);
     font-size: 1.5rem;
     margin-left: .5rem;
     cursor: pointer;
 }
 
-.projects .box-container .box .content i:hover {
+.projects .project-container .project-box .content i:hover {
     padding-left: 2rem;
 }
 
@@ -492,18 +508,41 @@ header .soumya {
     margin-bottom: 3rem;
 }
 
-.certificates .box-container {
+.certificates_filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates_filter .certificates_id {
+    margin: 0 1rem;
+    background: transparent;
+    padding: .6rem 1rem;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    color: var(--light-color);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.certificates_filter .certificates_id.active-certificates {
+    background: var(--color);
+    color: var(--font-color);
+}
+
+.certificates .certificates-container {
     columns: 2 35rem;
     column-gap: 1.5rem;
 }
 
-.certificates .box-container .box {
+.certificates .certificates-container .certificates-box {
     margin-bottom: 1rem;
     break-inside: avoid;
     position: relative;
 }
 
-.certificates .box-container .box h3 {
+.certificates .certificates-container .certificates-box h3 {
     text-align: center;
     font-size: 2rem;
     color: var(--light-color);
@@ -864,10 +903,10 @@ textarea {
     .heading span {
         color: var(--color);
     }
-    .projects .box-container .box .image img {
+    .projects .project-container .box .image img {
         height: 25rem;
     }
-    .projects .box-container {
+    .projects .project-container {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
     .me {
@@ -906,10 +945,10 @@ textarea {
         height: 45%;
         width: 80%;
     }
-    .projects .box-container .box .image img {
+    .projects .project-container .box .image img {
         height: 27rem;
     }
-    .projects .box-container {
+    .projects .project-container {
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     }
     .me {

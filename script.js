@@ -163,3 +163,41 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+
+let project = mixitup('.project-container', {
+    selectors: {
+        target: '.project-box'
+    },
+    animation: {
+        duration: 300
+    }
+})
+
+const linkproject = document.querySelectorAll('.project_id')
+
+function activeProject() {
+    linkproject.forEach(e => e.classList.remove('active-project'))
+    this.classList.add('active-project')
+}
+
+linkproject.forEach(e => e.addEventListener("click", activeProject));
+
+
+let certificates = mixitup('.certificates-container', {
+    selectors: {
+        target: '.certificates-box'
+    },
+    animation: {
+        duration: 300
+    }
+})
+
+const linkcertificates = document.querySelectorAll('.certificates_id')
+
+function activecertificates() {
+    linkcertificates.forEach(e => e.classList.remove('active-certificates'))
+    this.classList.add('active-certificates')
+}
+
+linkcertificates.forEach(e => e.addEventListener("click", activecertificates))

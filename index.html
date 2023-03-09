@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./img/icon1.png" type="image.png">
 
@@ -96,7 +96,7 @@
             <h1>About me</h1>
         </div>
 
-        <div class="container">
+        <div data-aos="zoom-in" data-aos-delay="600" class="container">
             <div class="image">
                 <img src="./img/passport.jpg" alt="">
             </div>
@@ -120,13 +120,13 @@
 
     <!-- qualification section starts -->
     <section class="qualification" id="education">
-        <div data-aos="zoom-in" data-aos-delay="300" class="heading">
+        <div data-aos="zoom-in" data-aos-delay="150" class="heading">
             <p class="subheading">my journey</p>
             <h1>qualification</h1>
         </div>
 
         <div class="qualification_container">
-            <div class="education">
+            <div data-aos="fade-left" data-aos-delay="300" class="education">
                 <h1><i class="fa-solid fa-graduation-cap"></i> Education</h1>
                 <div class="content">
                     <div class="box">
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="experience">
+            <div data-aos="fade-right" data-aos-delay="300" class="experience">
                 <h1><i class="fa-solid fa-brain"></i> learning Experience</h1>
                 <div class="content">
                     <div class="box">
@@ -263,88 +263,119 @@
             </h1>
         </div>
 
-        <div data-aos="zoom-in-down" data-aos-delay="450" class="box-container">
-            <div class="box">
+        <div class="projects_filter">
+            <span class="project_id active-project" data-filter="all">all</span>
+            <span class="project_id" data-filter=".web">web</span>
+            <span class="project_id" data-filter=".research">research work</span>
+        </div>
+
+        <div data-aos="zoom-in-down" data-aos-delay="450" class="project-container">
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/calculator.jpg" alt="">
                 </div>
                 <div class="content">
                     <h1>Calculator</h1>
                     <a href="https://soumayadip2002.github.io/Calculator/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/Beige minimalist photo collage.png" alt="">
                 </div>
                 <div class="content">
                     <h1>Online Food Shop</h1>
                     <a href="https://soumayadip2002.github.io/Online-Food-Shop/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/Green natural waterfall photo collage.png" alt="">
                 </div>
                 <div class="content">
                     <h1>Online Grocery Shop</h1>
                     <a href="https://soumayadip2002.github.io/Grocery-Shop-2.0/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/port.png" alt="">
                 </div>
                 <div class="content">
                     <h1>personal portfolio</h1>
                     <a href="https://soumayadip2002.github.io/Personal-Portfolio/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
 
-            <div class="box">
+            <div class="project-box mix research">
                 <div class="image">
                     <img src="./img/RSP Confarence Hub Publication C.jpg" alt="">
                 </div>
                 <div class="content">
                     <h1>Research Paper</h1>
                     <a href="https://ijarcce.com/papers/prediction-on-the-combine-effect-of-population-education-and-unemployment-on-criminal-activity-using-machine-learning/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
-            <div class="box">
+
+            <div class="project-box mix research">
+                <div class="image">
+                    <img src="./img/research.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Research Paper</h1>
+                    <a href="https://ijarcce.com/papers/prediction-on-the-combine-effect-of-population-education-and-unemployment-on-criminal-activity-using-machine-learning/" target="_blank">
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-box mix research">
+                <div class="image">
+                    <img src="./img/research.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Research Paper</h1>
+                    <a href="https://ijarcce.com/papers/prediction-on-the-combine-effect-of-population-education-and-unemployment-on-criminal-activity-using-machine-learning/" target="_blank">
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/spotify.webp" alt="">
                 </div>
                 <div class="content">
                     <h1>Music Website</h1>
                     <a href="https://soumayadip2002.github.io/Soumya-/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
 
-            <div class="box">
+            <div class="project-box mix web">
                 <div class="image">
                     <img src="./img/tourist.png" alt="">
                 </div>
                 <div class="content">
                     <h1>Tourist Website</h1>
                     <a href="https://soumayadip2002.github.io/Tourist/" target="_blank">
-                        <h3>Take a look <i class="fa-solid fa-arrow-right-long"></i></h3>
+                        <h3>demo <i class="fa-solid fa-arrow-right-long"></i></h3>
                     </a>
                 </div>
             </div>
@@ -359,23 +390,27 @@
             <p class="subheading">My Achievements</p>
             <h1>certificates</h1>
         </div>
-
-        <div data-aos="fade-right" data-aos-delay="750" class="box-container">
-            <div class="box">
+        <div class="certificates_filter">
+            <span class="certificates_id active-certificates" data-filter="all"> all</span>
+            <span class="certificates_id" data-filter=".coursera">coursera</span>
+            <span class="certificates_id" data-filter=".nptel">nptel</span>
+        </div>
+        <div data-aos="fade-right" data-aos-delay="750" class="certificates-container">
+            <div class="certificates-box mix coursera">
                 <div class="image">
                     <img src="./img/data.jpg" alt="">
                 </div>
                 <h3>Google data analytics</h3>
             </div>
 
-            <div class="box">
+            <div class="certificates-box mix nptel">
                 <div class="image">
                     <img src="./img/IOT.jpg" alt="">
                 </div>
                 <h3>IOT</h3>
             </div>
 
-            <div class="box">
+            <div class="certificates-box mix coursera">
                 <div class="image">
                     <img src="./img/web.jpg" alt="">
                 </div>
@@ -383,14 +418,14 @@
             </div>
 
 
-            <div class="box">
+            <div class="certificates-box mix nptel">
                 <div class="image">
                     <img src="./img/ethics.jpg" alt="">
                 </div>
                 <h3>Ethics in Engineering</h3>
             </div>
 
-            <div class="box">
+            <div class="certificates-box mix coursera">
                 <div class="image">
                     <img src="./img/communication.jpg" alt="">
                 </div>
@@ -475,6 +510,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./mixitup.min.js"></script>
     <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
