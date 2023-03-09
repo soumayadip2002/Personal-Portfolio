@@ -423,24 +423,12 @@ header .soumya {
 }
 
 .projects .box-container .box {
-    padding: 1.5rem;
+    padding: 2rem;
     background: var(--black);
     border-radius: 1rem;
     cursor: pointer;
     position: relative;
     box-shadow: var(--box-shadow);
-}
-
-.projects .box-container .box::after {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: #004445;
-    filter: blur(8px);
-    z-index: -2;
 }
 
 .projects .box-container .box .image {
@@ -705,11 +693,6 @@ textarea {
     transform: scale(1.2);
     rotate: 360deg;
     transition: .3s;
-}
-
-.qualification {
-    width: 80%;
-    margin: 0 auto;
 }
 
 .qualification_container {

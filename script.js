@@ -27,7 +27,7 @@ toggle.addEventListener("click", function() {
         r.style.setProperty("--bright", "#fff");
         r.style.setProperty("--menu-bar", "#0e2431");
     } else {
-        r.style.setProperty("--bg-color", "#eee");
+        r.style.setProperty("--bg-color", "#fff");
         r.style.setProperty("--white", "#111");
         r.style.setProperty("--light-color", "#000");
         r.style.setProperty("--black", "#fff");
