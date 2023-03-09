@@ -30,7 +30,7 @@ toggle.addEventListener("click", function() {
         r.style.setProperty("--bg-color", "#eee");
         r.style.setProperty("--white", "#111");
         r.style.setProperty("--light-color", "#000");
-        r.style.setProperty("--black", "#f0ece2");
+        r.style.setProperty("--black", "#fff");
         r.style.setProperty("--color", "#27ae60");
         r.style.setProperty("--font-color", "#fff");
         r.style.setProperty("--logo-color1", "#ff347f");
