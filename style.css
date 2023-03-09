@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@100;400;500;600&display=swap');
 :root {
+    --hue-color: 342;
     --bg-color: linear-gradient(145deg, #1e2024, #23272b);
     --font-color: #111;
     --black: #212428;
@@ -17,6 +18,7 @@
     --home-img: #42b883;
     --menu-bar: #0e2431;
     --bright: #fff;
+    --box-color: hsl(var(--hue-color), 14%, 10%);
 }
 
 * {
@@ -452,10 +454,14 @@ header .soumya {
     box-shadow: var(--box-shadow);
 }
 
-.projects .project-container .project-box .image img {
+.projects .project-container .project-box img {
     height: 27rem;
     width: 100%;
     border: .2rem solid rgba(0, 0, 0, 0.5);
+}
+
+.project_item {
+    display: none;
 }
 
 .projects .project-container .project-box .image img:hover {
@@ -495,6 +501,107 @@ header .soumya {
 
 .projects .project-container .project-box .content i:hover {
     padding-left: 2rem;
+}
+
+.project_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.project_popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project_popup-inner {
+    background-color: var(--black);
+    box-shadow: var(--box-shadow);
+    width: 900px;
+    border-radius: .5rem;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.project_popup-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.project_popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--color);
+    cursor: pointer;
+}
+
+.project_popup-img {
+    border-radius: .5rem;
+}
+
+.project_popup-subtitle {
+    color: white;
+    font-size: 1.4;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.details_title {
+    font-size: 2.25rem;
+    font-weight: medium;
+    margin-bottom: 0.1rem;
+    color: var(--light-color);
+    text-align: left;
+}
+
+.details_description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--white);
+    line-height: 2;
+}
+
+.details_info li {
+    margin-bottom: .75rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: var(--light-color);
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.details_info li:last-child {
+    margin-bottom: 0;
+}
+
+.details_info li span {
+    font-weight: normal;
+}
+
+.details_info li a {
+    text-transform: lowercase;
+    color: var(--color);
+}
+
+.details_description a {
+    text-transform: lowercase;
+    color: var(--color);
 }
 
 .certificates {
@@ -712,6 +819,10 @@ textarea {
     transition: .3s;
 }
 
+.qualification {
+    margin-top: -2rem;
+}
+
 .qualification_container {
     display: flex;
     grid-template-columns: 1fr 1fr;
@@ -792,12 +903,23 @@ textarea {
     header .icon #menu-bars {
         display: inline-block;
         z-index: -1;
+        font-size: 2.3rem;
+    }
+    .project_popup-inner {
+        width: 420px;
+        padding: 2.8rem 1.5rem 2.5rem;
+    }
+    .project_popup-content {
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+        text-align: center;
     }
     #nclose {
         position: absolute;
         display: inline-block;
         top: 0;
-        color: var(--color);
+        color: var(--logo-color1);
+        border: none;
     }
     .about .container .content .con {
         display: flex;
@@ -845,6 +967,8 @@ textarea {
         font-size: 2rem;
         color: var(--light-color);
         text-align: center;
+        border: .1rem solid rgba(0, 0, 0, .2);
+        border-radius: 1rem;
     }
     header .navbar a.active,
     header .navbar a:hover {
