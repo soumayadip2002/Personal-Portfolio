@@ -39,6 +39,24 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--violet);
+}
+
 body {
     background: var(--bg-color);
 }
@@ -457,23 +475,19 @@ header .soumya {
 .projects .project-container .project-box img {
     height: 27rem;
     width: 100%;
-    border: .2rem solid rgba(0, 0, 0, 0.5);
+    border: .2rem solid rgba(0, 0, 0, 0.2);
 }
 
 .project_item {
     display: none;
 }
 
-.projects .project-container .project-box .image img:hover {
+.projects .project-container .project-box img:hover {
     transform: scale(1.05);
     transition: .3s;
 }
 
-.projects .project-container .project-box .content {
-    padding: 1rem;
-}
-
-.projects .project-container .project-box .content a {
+.projects .project-container .project-box .pro_btn {
     color: var(--light-color);
     font-size: 1.2rem;
 }
@@ -482,25 +496,21 @@ header .soumya {
     margin-top: 1.3rem;
 }
 
-.projects .project-container .project-box .content a:hover {
+.projects .project-container .project-box .pro_btn:hover {
     color: var(--violet);
 }
 
-.projects .project-container .project-box .content h1 {
+.projects .project-container .project-box .title {
     font-size: 1.6rem;
     color: var(--light-color);
-    text-align: center;
+    margin-top: .5rem;
 }
 
-.projects .project-container .project-box .content i {
+.projects .project-container .project-box .pro_btn i {
     color: var(--orange);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-left: .5rem;
     cursor: pointer;
-}
-
-.projects .project-container .project-box .content i:hover {
-    padding-left: 2rem;
 }
 
 .project_popup {
@@ -514,7 +524,7 @@ header .soumya {
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
-    z-index: 100;
+    z-index: 2000;
     opacity: 0;
     visibility: hidden;
     transition: .3s;
@@ -543,9 +553,9 @@ header .soumya {
 
 .project_popup-close {
     position: absolute;
-    top: 1rem;
+    top: 0;
     right: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--color);
     cursor: pointer;
 }
@@ -556,8 +566,8 @@ header .soumya {
 
 .project_popup-subtitle {
     color: white;
-    font-size: 1.4;
-    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
     text-align: left;
 }
 
@@ -570,7 +580,7 @@ header .soumya {
 }
 
 .details_description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     text-align: left;
     color: var(--white);
@@ -580,7 +590,7 @@ header .soumya {
 .details_info li {
     margin-bottom: .75rem;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--light-color);
     text-align: left;
     margin-left: 2rem;
@@ -940,6 +950,8 @@ textarea {
     }
     header .soumya span {
         color: var(--color);
+        font-family: 'Lobster', cursive;
+        font-weight: normal;
     }
     header .navbar {
         position: absolute;
