@@ -10,15 +10,17 @@
     --violet: rgb(149, 12, 161);
     --orange: #fd4d05;
     --green: #0fd310;
+    --linear: linear-gradient(#232146, #44383F);
     --light-color: #fff;
     --border: .2rem solid var(--color);
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.788);
     --logo-color1: #fc3a52;
     --logo-color2: #42b883;
     --home-img: #42b883;
     --menu-bar: #0e2431;
-    --bright: #fff;
+    --bright: #ffffff9c;
     --box-color: hsl(var(--hue-color), 14%, 10%);
+    --background: url('./img/black.jpg');
 }
 
 * {
@@ -95,10 +97,19 @@ body {
 }
 
 .theme {
+    width: fit-content;
     font-size: 3rem;
-    color: var(--bright);
+    color: var(--light-color);
+    background: var(--bright);
     cursor: pointer;
-    padding: 1rem;
+    padding: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 1.2rem;
+    margin-top: -.2rem;
 }
 
 .logo {
@@ -163,7 +174,7 @@ body {
 
 header {
     position: fixed;
-    background: var(--black);
+    background: var(--linear);
     top: 0;
     left: 0;
     right: 0;
@@ -171,7 +182,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: var(--black);
     z-index: 1000;
     box-shadow: var(--box-shadow);
 }
@@ -216,12 +226,13 @@ header .soumya {
 }
 
 .home {
-    margin: 0 auto;
-    margin-top: 9rem;
-    width: 90%;
-    background: var(--black);
-    border-radius: 1rem;
+    margin-top: 6.6rem;
+    background-image: url('./img/black.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 0;
+    padding: 2rem;
     box-shadow: var(--box-shadow);
 }
 
@@ -257,13 +268,13 @@ header .soumya {
 
 .home .content h1 {
     font-size: 4rem;
-    color: var(--light-color);
+    color: #fff;
 }
 
 .home .content h2 {
     margin-top: 1rem;
     font-size: 2.5rem;
-    color: var(--white);
+    color: #ddd;
 }
 
 .home .content span {
@@ -273,7 +284,7 @@ header .soumya {
 .home .content p {
     margin-top: 1rem;
     font-size: 1.4rem;
-    color: var(--light-color);
+    color: #fff;
     padding-bottom: 5rem;
     text-align: justify;
     line-height: 2;
@@ -281,7 +292,7 @@ header .soumya {
 
 .home .content .btn {
     font-size: 1.5rem;
-    color: var(--light-color);
+    color: #fff;
     margin-right: .5rem;
 }
 
@@ -437,7 +448,7 @@ header .soumya {
     margin-top: 2rem;
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 3rem;
     column-gap: 3rem;
 }
@@ -554,7 +565,7 @@ header .soumya {
 .project_popup-close {
     position: absolute;
     top: 0;
-    right: 1.5rem;
+    right: 1rem;
     font-size: 2rem;
     color: var(--color);
     cursor: pointer;
@@ -563,6 +574,8 @@ header .soumya {
 .project_popup-img {
     border-radius: .5rem;
     border: .1rem solid rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
 }
 
 .project_popup-subtitle {
@@ -891,6 +904,12 @@ textarea {
     display: none;
 }
 
+@media screen and (max-width:1024px) {
+    .projects .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width:991px) {
     html {
         font-size: 55%
@@ -928,9 +947,15 @@ textarea {
     #nclose {
         position: absolute;
         display: inline-block;
-        top: 0;
-        color: var(--logo-color1);
+        top: .5rem;
+        right: 1rem;
+        font-size: 2rem;
+        color: #000;
         border: none;
+        cursor: pointer;
+        padding: .6rem 1rem;
+        background: #12CA98;
+        border-radius: 50%;
     }
     .about .container .content .con {
         display: flex;
@@ -938,9 +963,10 @@ textarea {
         align-items: center;
     }
     .theme {
-        padding: 0;
+        padding: .6rem;
         margin-top: -1.5rem;
-        margin-left: -1.3rem;
+        position: absolute;
+        right: 3px;
     }
     header .soumya {
         display: inline-block;
@@ -957,19 +983,18 @@ textarea {
     header .navbar {
         position: absolute;
         top: 0;
-        right: 0;
-        background: var(--menu-bar);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        border-bottom: .1rem solid rgba(0, 0, 0, .2);
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-        width: 80vw;
+        left: -110%;
+        background: linear-gradient(#12CA98, #A8EB12);
         padding-top: 6rem;
         transition: linear .3s;
         height: 100vh;
-        width: 80vw;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        left: 0;
         transition: linear .3s;
         z-index: 1;
     }
@@ -980,7 +1005,7 @@ textarea {
         font-size: 2rem;
         color: var(--light-color);
         text-align: center;
-        border: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
         border-radius: 1rem;
     }
     header .navbar a.active,
@@ -1033,9 +1058,6 @@ textarea {
     .projects .project-container .box .image img {
         height: 25rem;
     }
-    .projects .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    }
     .me {
         width: 80%;
     }
@@ -1044,6 +1066,9 @@ textarea {
     }
     .card::before {
         height: 200%;
+    }
+    .home {
+        margin-top: 6.6rem;
     }
 }
 
@@ -1076,7 +1101,7 @@ textarea {
         height: 27rem;
     }
     .projects .project-container {
-        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-template-columns: repeat(1, 1fr);
     }
     .me {
         width: 100%;

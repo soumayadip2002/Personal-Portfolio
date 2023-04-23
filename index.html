@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./img/icon1.png" type="image.png">
 
@@ -29,7 +29,7 @@
         </div>
 
         <nav class="navbar">
-            <a href="#" id="nclose"><i class="fa-solid fa-xmark"></i></a>
+            <i id="nclose" class="fa-solid fa-xmark"></i>
             <div class="navbar1">
                 <a data-aos="fade-left" data-aos-delay="300" href="#home">home</a>
                 <a data-aos="fade-left" data-aos-delay="450" href="#about">about</a>
@@ -72,7 +72,7 @@
                         <a href="#about" class="btn"><i class="fa-solid fa-user "></i> more about me</a>
                     </div>
                     <div class="btn2">
-                        <a href="./img/Resume.pdf" class="btn" download="Resume"><i class="fa-sharp fa-solid fa-download"></i> Download Cv </a>
+                        <a href="./img/Resume1.pdf" class="btn" download="Resume"><i class="fa-sharp fa-solid fa-download"></i> Download Cv </a>
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@
         </div>
 
         <div class="qualification_container">
-            <div data-aos="fade-left" data-aos-delay="300" class="education">
+            <div data-aos="fade-up" data-aos-delay="300" class="education">
                 <h1><i class="fa-solid fa-graduation-cap"></i> Education</h1>
                 <div class="content">
                     <div class="box">
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div data-aos="fade-right" data-aos-delay="300" class="experience">
+            <div data-aos="fade-down" data-aos-delay="300" class="experience">
                 <h1><i class="fa-solid fa-brain"></i> learning Experience</h1>
                 <div class="content">
                     <div class="box">
@@ -197,6 +197,12 @@
                     <div class="card swiper-slide">
                         <div class="image-box">
                             <img src="./img/js.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="image-box">
+                            <img src="./img/php.png" alt="">
                         </div>
                     </div>
 
@@ -270,6 +276,28 @@
         </div>
 
         <div data-aos="zoom-in-down" data-aos-delay="450" class="project-container">
+
+            <div class="project-box mix web">
+                <img src="./img/blog.jpg" class="pro_img">
+                <h1 class="title">Blog</h1>
+                <span class="pro_btn">demo
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </span>
+
+                <div class="project_item">
+                    <h3 class="details_title">Bloging Website</h3>
+                    <p class="details_description">
+                        responsive Bloging website using html, css, js, php, mysql
+                    </p>
+                    <ul class="details_info">
+                        <li>Created - <span>6th april 2023</span></li>
+                        <li>Technologies - <span>html, css, js, php, mysql</span></li>
+                        <li>Role - <span>frontend, backend</span></li>
+                        <li>View - <span><a href="https://thethoughtbox.000webhostapp.com/">https://thethoughtbox.000webhostapp.com/</a></span></li>
+                    </ul>
+
+                </div>
+            </div>
 
             <div class="project-box mix web">
                 <img src="./img/e-commerce.png" class="pro_img">
@@ -403,7 +431,7 @@
             </div>
 
             <div class="project-box mix research">
-                <img src="./img/research.jpg" class="pro_img">
+                <img src="./img/divorce_page-0001.jpg" class="pro_img">
                 <h1 class="title">Research Paper</h1>
                 <span class="pro_btn">demo
                     <i class="fa-solid fa-arrow-right-long"></i>
@@ -417,33 +445,11 @@
                     <ul class="details_info">
                         <li>published - <span>4th april 2023</span></li>
                         <li>keywords - <span>Divorce, Feature Selection, Decision Tree, Random Forest, Multilayer Perceptron, 10-fold cross validation</span></li>
-                        <li>View - <span><a href="https://ijarcce.com/wp-content/uploads/2022/05/IJARCCE.2022.114100.pdf">https://ijarcce.com/wp-content/uploads/2022/05/IJARCCE.2022.114100.pdf</a></span></li>
+                        <li>View - <span><a href="https://doi.org/10.46647/ijetms.2023.v07i02.024">https://doi.org/10.46647/ijetms.2023.v07i02.024</a></span></li>
                     </ul>
 
                 </div>
             </div>
-
-            <div class="project-box mix research">
-                <img src="./img/research.jpg" class="pro_img">
-                <h1 class="title">Research Paper</h1>
-                <span class="pro_btn">demo
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </span>
-
-                <div class="project_item">
-                    <h3 class="details_title">Prediction of divorce rate</h3>
-                    <p class="details_description">
-                        Prediction on the combine effect of different variables on Divorce rate using machine learning algorithms
-                    </p>
-                    <ul class="details_info">
-                        <li>published - <span>4th april 2023</span></li>
-                        <li>keywords - <span>Divorce, Feature Selection, Decision Tree, Random Forest, Multilayer Perceptron, 10-fold cross validation</span></li>
-                        <li>View - <span><a href="https://ijarcce.com/wp-content/uploads/2022/05/IJARCCE.2022.114100.pdf">https://ijarcce.com/wp-content/uploads/2022/05/IJARCCE.2022.114100.pdf</a></span></li>
-                    </ul>
-
-                </div>
-            </div>
-
             <div class="project-box mix web">
                 <img src="./img/spotify.webp" class="pro_img">
                 <h1 class="title">music website</h1>
@@ -496,7 +502,7 @@
                         <i class="fa-solid fa-xmark"></i>
                     </span>
                     <div class="pp__thumbnail">
-                        <img src="./img/calculator.jpg" width="350px" alt="1" class="project_popup-img">
+                        <img src="./img/calculator.jpg" alt="1" class="project_popup-img">
                     </div>
                     <div class="project_popup-info">
                         <div class="project_popup-subtitle"> Featured - <span>Research Article</span></div>

@@ -12,6 +12,7 @@ menuclose.onclick = () => {
 }
 
 let r = document.querySelector(':root');
+const home = document.querySelector('.home');
 const toggle = document.getElementById('theme');
 
 toggle.addEventListener("click", function() {
@@ -27,10 +28,12 @@ toggle.addEventListener("click", function() {
         r.style.setProperty("--logo-color1", "#fc3a52");
         r.style.setProperty("--logo-color2", "#42b883");
         r.style.setProperty("--home-img", "#42b883");
-        r.style.setProperty("--bright", "#fff");
+        r.style.setProperty("--bright", "#aaa");
         r.style.setProperty("--menu-bar", "#0e2431");
+        r.style.setProperty("--linear", "linear-gradient(#232146, #44383F)");
+
     } else {
-        r.style.setProperty("--bg-color", "#fff");
+        r.style.setProperty("--bg-color", "#EBDEE5");
         r.style.setProperty("--white", "#111");
         r.style.setProperty("--light-color", "#000");
         r.style.setProperty("--black", "#eee");
@@ -39,8 +42,12 @@ toggle.addEventListener("click", function() {
         r.style.setProperty("--logo-color1", "#ff347f");
         r.style.setProperty("--logo-color2", "#f8b400");
         r.style.setProperty("--home-img", "#27ae60");
-        r.style.setProperty("--bright", "#000");
+        r.style.setProperty("--bright", "#aaa");
         r.style.setProperty("--menu-bar", "#2c786c");
+        r.style.setProperty("--linear", "linear-gradient(#6360A3, #E5A7E5)");
+
+
+
 
     }
 })
@@ -52,7 +59,7 @@ window.onscroll = () => {
 }
 
 var type = new Typed(".multi-text", {
-    strings: ["College Student", "Web Developer", "Python Developer"],
+    strings: ["College Student", "Web Developer", "Python Developer", "php developer"],
     typeSpeed: 100,
     backSpedd: 100,
     backDelay: 1000,
