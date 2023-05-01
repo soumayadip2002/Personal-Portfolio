@@ -174,7 +174,8 @@ body {
 
 header {
     position: fixed;
-    background: var(--linear);
+    background: transparent;
+    backdrop-filter: blur(35px);
     top: 0;
     left: 0;
     right: 0;
